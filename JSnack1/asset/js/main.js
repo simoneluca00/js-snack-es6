@@ -41,17 +41,17 @@ for (let i = 0; i < bicycles.length; i++) {
 }
 
 // destructuring delle chiavi degli oggetti appartenenti all'array "bicycles"
-let {nome,pesoKg} = bicycles;
+let {nome,pesoKg} = pesoMinore;
 
 // stampa della bici che ha il peso minore
 document.getElementById('container').innerHTML = 
 `
     La bici da corsa 
     <span style="font-weight:bold;">
-        ${pesoMinore.nome}
+        ${nome}
     </span> 
     è quella che ha un peso minore: 
     <span style="font-weight:bold;">
-        ${pesoMinore.pesoKg}
+        ${pesoKg}
     </span> kg.
 `

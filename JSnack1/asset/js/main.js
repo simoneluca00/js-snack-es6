@@ -40,7 +40,7 @@ for (let i = 0; i < bicycles.length; i++) {
     }
 }
 
-// destructuring delle chiavi degli oggetti appartenenti all'array "bicycles"
+// destructuring chiavi dell'oggetto che ha il peso minore
 let {nome,pesoKg} = pesoMinore;
 
 // stampa della bici che ha il peso minore

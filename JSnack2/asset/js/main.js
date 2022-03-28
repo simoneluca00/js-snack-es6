@@ -50,15 +50,31 @@ const footballTeams = [
 for (let i = 0; i < footballTeams.length; i++) {
     
     let numeroRandomFalli = getRandomInt(2,60);
-    let numeroRandomPunti = getRandomInt(2,100)
+    let numeroRandomPunti = getRandomInt(2,100);
     
-    let team = footballTeams[i];
+    const team = footballTeams[i];
 
     team.falliSubiti = numeroRandomFalli;
     team.puntiFatti = numeroRandomPunti;
 
-    let {nome, falliSubiti} = team;
+}
+
+const newArrayTeams = [];
+
+for (let i = 0; i < footballTeams.length; i++) {
     
+    const element = footballTeams[i];
+
+    const {nome, falliSubiti} = element;
+
+    newArrayTeams.push(
+        {
+            nome,
+            falliSubiti
+        }
+    )
+
+        
     document.getElementById('container').innerHTML += 
     `
         <li>
@@ -71,7 +87,10 @@ for (let i = 0; i < footballTeams.length; i++) {
     `
 
     console.log(`La squadra ${nome} ha subito ${falliSubiti} falli`)
+
 }
+
+console.log(newArrayTeams)
 
 
 // funzione per generare numeri random

@@ -29,13 +29,23 @@ myArray.forEach(
 
 // condizioni per stampare il messaggio in base al numero degli elementi che soddisfano le condizioni precedenti
 if ( (max - min) == 2) {
-    document.getElementById('container').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray2.join(', ')}</span>`
+    document.getElementById('containerForEach').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray2.join(', ')}</span>`
 } else if ( (max - min ) == 0 || (max - min ) == 1 ) {
-    document.getElementById('container').innerHTML += `Mi dispiace... non c'è posto per nessuno`
+    document.getElementById('containerForEach').innerHTML += `Mi dispiace... non c'è posto per nessuno`
 } else {
-    document.getElementById('container').innerHTML += `I nomi scelti sono <span style="font-weight: bold;">${newMyArray2.join(', ')}</span>`
+    document.getElementById('containerForEach').innerHTML += `I nomi scelti sono <span style="font-weight: bold;">${newMyArray2.join(', ')}</span>`
 }
  
 
 // e poi con filter.
-// const newMyArray3 = myArray.filter() 
+const newMyArray3 = myArray.filter(
+    (element,index) => index > min && index < max
+) 
+
+if ( (max - min) == 2) {
+    document.getElementById('containerFilter').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray3.join(', ')}</span>`
+} else if ( (max - min ) == 0 || (max - min ) == 1 ) {
+    document.getElementById('containerFilter').innerHTML += `Mi dispiace... non c'è posto per nessuno`
+} else {
+    document.getElementById('containerFilter').innerHTML += `I nomi scelti sono <span style="font-weight: bold;">${newMyArray3.join(', ')}</span>`
+}

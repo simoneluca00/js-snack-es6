@@ -1,9 +1,6 @@
 // Dato l'array di nomi:
 const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
 
-// e dati due numeri min e max (min più piccolo di max) --> per i PROMPT TODO convalida
-
-
 let max;
 let min;
 
@@ -29,9 +26,9 @@ myArray.forEach(
 
 // condizioni per stampare il messaggio in base al numero degli elementi che soddisfano le condizioni precedenti
 if ( (max - min) == 2) {
-    document.getElementById('containerForEach').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray2.join(', ')}</span>`
+    document.getElementById('containerForEach').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray2}</span>`
 } else if ( (max - min ) == 0 || (max - min ) == 1 ) {
-    document.getElementById('containerForEach').innerHTML += `Mi dispiace... non c'è posto per nessuno`
+    document.getElementById('containerForEach').innerHTML += `Mi dispiace... non c'è posto per nessuno!`
 } else {
     document.getElementById('containerForEach').innerHTML += `I nomi scelti sono <span style="font-weight: bold;">${newMyArray2.join(', ')}</span>`
 }
@@ -43,9 +40,9 @@ const newMyArray3 = myArray.filter(
 ) 
 
 if ( (max - min) == 2) {
-    document.getElementById('containerFilter').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray3.join(', ')}</span>`
+    document.getElementById('containerFilter').innerHTML += `Il nome scelto è <span style="font-weight: bold;">${newMyArray3}</span>`
 } else if ( (max - min ) == 0 || (max - min ) == 1 ) {
-    document.getElementById('containerFilter').innerHTML += `Mi dispiace... non c'è posto per nessuno`
+    document.getElementById('containerFilter').innerHTML += `Mi dispiace... non c'è posto per nessuno!`
 } else {
     document.getElementById('containerFilter').innerHTML += `I nomi scelti sono <span style="font-weight: bold;">${newMyArray3.join(', ')}</span>`
 }
